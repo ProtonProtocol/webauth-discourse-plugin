@@ -1,0 +1,11 @@
+{
+  "name": "discourse-webauth",
+  "version": "0.0.1",
+  "author": "Coruscate Digital",
+  "license": "MIT",
+  "devDependencies": {
+    "@proton/web-sdk": "^4.2.15",
+    "add": "^2.0.6",
+    "eslint-config-discourse": "^3.1.0"
+  }
+}

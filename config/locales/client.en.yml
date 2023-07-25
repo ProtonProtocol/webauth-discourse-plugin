@@ -1,0 +1,20 @@
+en:
+  site_settings:
+    discourse_webauth_enabled: Enable WebAuth
+    discourse_webauth_chain: WebAuth Chain
+  js:
+    discourse_webauth:
+      connect:
+        button_verify: Verify Connection
+      message:
+        error: Something went wrong. Redirecting home.
+        sdk_not_loaded: Could not load WebSDK. Redirecting home.
+        login_cancelled: Login cancelled. Redirecting home.
+        verify_login: Please verify login.
+        fetch_nonce_error: Could not fetch nonce. Redirecting home.
+        verification_failed: Verification failed. Redirecting home.
+        verification_success: Verification successful! Connecting with @%{actor}...
+    login:
+      webauth:
+        name: WebAuth
+        title: Log in with WebAuth

@@ -1,0 +1,60 @@
+.webauth-wrapper{
+  position: absolute;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgb(119, 0, 255);
+  color: white;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  z-index: 99999;
+}
+.abstract-lines {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin: auto 0;
+  overflow: hidden;
+  width: 140vw !important;
+  min-width: 1300px;
+  translate: -50% -50%;
+  pointer-events: none;
+  z-index: -1;
+}
+.proton-icon {
+  width: 150px;
+}
+
+.shine-rectangle {
+  animation: slide 2s infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: matrix(-0.7, -0.9, 1.3, -1, -39.8, 88.5);
+  }
+  100% {
+    transform: matrix(-0.7, -0.9, 1.3, -1, 135.8, 303.5);
+  }
+}
+
+.btn-webauth{
+  background-color: rgb(26, 26, 26) !important;
+  color: white !important;
+  transition: all 0.3s ease-in-out;
+}
+.btn-webauth:hover{
+  opacity: 0.8
+}
+
+.btn-social.webauth .d-icon{
+  color: #6031D2
+}
+
+#webauth_message {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

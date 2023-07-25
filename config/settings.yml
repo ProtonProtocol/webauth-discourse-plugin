@@ -1,0 +1,11 @@
+plugins:
+  discourse_webauth_enabled:
+    default: true
+    client: true
+  discourse_webauth_chain:
+    default: 'Proton Mainnet'
+    client: true
+    type: enum
+    choices: 
+      - Proton Mainnet
+      - Proton Testnet
