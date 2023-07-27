@@ -51,3 +51,24 @@ You have two options for the chain:
 - Proton Testnet
 
 ![WebAuth Chain](/chain.png "WebAuth Chain")
+
+## How does it work?
+
+1. User chooses to login via WebAuth ⚛️
+2. User redirected to WebAuth login, and creates a WebAuth session
+3. Unique security nonce creation 🔐
+    - In the background, the frontend requests a nonce from the backend 
+    - The backend creates the nonce, assigns it to the Discourse session, and sends it to the frontend
+4. User then signs an additional transaction: Contract `discwebauth`, Action `verify`, with the nonce from step 3 as data
+5. Frontend sends the Transaction ID returned from step 4, actor and permission from the WebAuth Session and the nonce to the backend 
+6. Backend does a number of checks, and returns with failed authentication if any of the checks don't pass ✅❌
+    - Check if the supplied nonce matches the nonce in the Discourse Session
+    - Makes sure there's a transaction ID to work with, as well as an actor and permission
+    - Calls `get transaction` endpoint on the [Proton Dex API](https://api-docs.protondex.com/) to verify the transaction exists, and get the transaction details of the supplied transaction ID
+    - Checks the `account` and `name` of the transaction match `discwebauth` and `verify` respectively
+    - Checks the actor and permission of transaction matches the supplied actor and permission
+    - Checks the nonce field in the transaction data matches the supplied nonce
+    - Checks to make sure the transaction timestamp is no older than 60 seconds
+7. Authentication passes 🚀 
+    - If the WebAuth account is connected to an existing Discourse account, the user will be logged in to the connected Discourse account
+    - If the WebAuth account is not connected, the user will be redirected to setup a new account
