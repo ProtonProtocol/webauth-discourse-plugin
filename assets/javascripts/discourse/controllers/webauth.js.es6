@@ -104,6 +104,8 @@ export default Controller.extend({
     document.getElementById("webauth_permission").value = this.proton.session.auth.permission;
     document.getElementById("webauth_nonce").value = nonce;
     document.getElementById("webauth_transaction_id").value = transaction_id;
+    // wait half a second before submitting form
+    // allows transaction to be broadcasted
     setTimeout(() => {
       document.getElementById("webauth_form").submit();
     }, 500);

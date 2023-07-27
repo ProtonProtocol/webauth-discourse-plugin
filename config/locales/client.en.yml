@@ -13,7 +13,7 @@ en:
         verify_login: Please verify login.
         fetch_nonce_error: Could not fetch nonce. Redirecting home.
         verification_failed: Verification failed. Redirecting home.
-        verification_success: Verification successful! Connecting with @%{actor}...
+        verification_success: Checking verification & connecting with @%{actor}...
     login:
       webauth:
         name: WebAuth
