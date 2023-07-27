@@ -2,14 +2,23 @@
   position: absolute;
   top: 0; left: 0;
   width: 100vw; height: 100vh;
+  width: 100dvw; height: 100dvh;
   background-color: rgb(119, 0, 255);
   color: white;
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
   z-index: 99999;
+}
+.webauth-wrapper .webauth-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
+  text-align: center;
+  max-width: 500px;
 }
 .abstract-lines {
   position: absolute;

@@ -104,7 +104,9 @@ export default Controller.extend({
     document.getElementById("webauth_permission").value = this.proton.session.auth.permission;
     document.getElementById("webauth_nonce").value = nonce;
     document.getElementById("webauth_transaction_id").value = transaction_id;
-    document.getElementById("webauth_form").submit();
+    setTimeout(() => {
+      document.getElementById("webauth_form").submit();
+    }, 500);
   },
 
   // keep track of verification status
