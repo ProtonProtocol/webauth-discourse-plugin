@@ -31,7 +31,7 @@ hooks:
         - sudo -E -u discourse git clone https://github.com/conorseed/discourse-webauth.git   # <-- added
 ```
 
-Follow the existing format of the docker_manager.git line. For example, if it does not contain `sudo -E -u discourse` then insert - `git clone https://github.com/conorseed/discourse-webauth.gitt`.
+Follow the existing format of the docker_manager.git line. For example, if it does not contain `sudo -E -u discourse` then insert - `git clone https://github.com/conorseed/discourse-webauth.git`.
 
 Rebuild the container:
 ```bash
