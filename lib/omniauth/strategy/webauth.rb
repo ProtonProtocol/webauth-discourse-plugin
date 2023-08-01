@@ -1,7 +1,3 @@
-require 'uri'
-require 'net/http'
-require 'json'
-
 module OmniAuth
   module Strategies
     class Webauth
