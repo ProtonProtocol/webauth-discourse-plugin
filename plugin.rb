@@ -2,7 +2,7 @@
 # about: Adds WebAuth as a third-party authentication provider
 # version: 0.0.1
 # authors: Coruscate Digital
-# url: https://coruscatedigital.nz/
+# url: https://github.com/conorseed/discourse-webauth
 # required_version: 2.7.0
 
 enabled_site_setting :discourse_webauth_enabled
