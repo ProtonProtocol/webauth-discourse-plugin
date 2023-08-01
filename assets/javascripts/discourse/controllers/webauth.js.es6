@@ -82,7 +82,7 @@ export default Controller.extend({
         { broadcast: true }
       );
       // check if transaction is signed
-      transaction_id = result?.payload?.tx;
+      transaction_id = result?.processed?.id;
 
       // throw error if transaction is not signed
       if(!transaction_id) {
